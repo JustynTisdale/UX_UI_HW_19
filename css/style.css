@@ -1,0 +1,531 @@
+/* Basic Styles */
+html {
+    scroll-behavior: smooth; /* Add smooth scroll behavior */
+  }
+  
+  .typing-animation {
+    font-family: Arial, sans-serif; /* Match the rest of your text */
+    font-size: 2rem; /* Adjust as needed */
+    color: #333; /* Adjust the text color as desired */
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide the overflowing text */
+    border-right: 2px solid; /* Create a cursor effect */
+    width: 0; /* Start with width 0 for the animation */
+    animation: typing 4s steps(30, end), blink-caret .75s step-end infinite;
+  }
+  
+  /* Typing animation */
+  @keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+  }
+  
+  /* Blinking cursor */
+  @keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #333; /* Match the text color */
+    }
+  }
+  
+  
+  .hero-img {
+    max-width: 250px; /* Adjust the size as needed */
+    max-height: 250px; /* Adjust the size as needed */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    color: #333;
+  }
+  
+  p {
+    font-size: 1.5rem;
+    color: #666;
+  }
+  
+  .btn-custom {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+  
+  .btn-custom:hover {
+      background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  /* Navigation Styles */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px; /* Increased padding for more space */
+    background-color: #333;
+    position: relative;
+  }
+  
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-list li {
+    margin: 10px 0;
+  }
+  
+  .nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  
+  /* Always display the hamburger icon */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+  
+  /* Hide the checkbox (menu-toggle) */
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* When the checkbox is checked, display the nav list */
+  .menu-toggle:checked ~ .nav-list {
+    display: flex;
+  }
+  
+  /* Toggle hamburger icon into "X" when checked */
+  .menu-toggle:checked ~ .hamburger .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .menu-toggle:checked ~ .hamburger .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle:checked ~ .hamburger .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  /* Hero Image Section */
+  .heroImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; /* Keep the height to fill the screen */
+    color: #333; /* Change text color for contrast */
+    text-align: center;
+    background-color: #fff; /* Set background to white */
+    padding-top: 20px; /* Add padding to the top */
+    margin-top: 40px; /* Add margin-top for spacing above */
+    margin-bottom: 20px; /* Add margin to the bottom for spacing */
+  }
+  
+  .heroImg img {
+    max-width: 400px; /* Set the max width */
+    max-height: 400px; /* Set the max height */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image circular */
+    margin-bottom: 20px;
+  }
+  
+  
+  .download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* About Section */
+  
+  .about-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically centered */
+    justify-content: space-between; /* Space between text and image */
+    max-width: 1200px; /* Set a max width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+  
+  /* About Section */
+  
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
+  }
+  
+  .about-text {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .about-image {
+    flex-shrink: 0;
+    width: 300px; /* Default image width for smaller screens */
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Increase image size for larger screens */
+  @media (min-width: 1024px) {
+    .about-image {
+      width: 550px; /* Increase image width for larger screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column; /* Stack text and image vertically on smaller screens */
+    }
+  
+    .about-text {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .about-image {
+      width: 100%; /* Full width image on smaller screens */
+    }
+  }
+  
+  
+  
+  /* Skills Section */
+  .skills {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .skills ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills ul li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .mySkills {
+    padding: 40px;
+    text-align: center;
+    background-color: #f5f5f5;
+  }
+  
+  .mySkills {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  .flexChild {
+    flex: 1 1 30%; /* or adjust according to your needs */
+    margin: 10px; /* Maintain consistent spacing */
+  }
+  
+  .flexContainer {
+    display: flex;
+    flex-direction: row; /* Aligns the flex children in a row */
+    justify-content: space-between; /* Distributes the flex children evenly */
+    align-items: flex-start; /* Aligns items to the top */
+    flex-wrap: wrap; /* Ensures responsive behavior on smaller screens */
+  }
+  
+  .flexChild {
+    flex: 1 1 30%; /* Allow flexible growth and set a basis */
+    min-width: 250px; /* Ensure a minimum width to prevent collapsing */
+  }
+  
+  .flexChild {
+    width: 30%; /* Adjusting to 30% to account for padding/margin */
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .flexChild img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .flexChild h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .flexChild p {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  .figma-image {
+    width: 80px;  /* Adjust the width as needed */
+    height: 80px; /* Adjust the height as needed */
+    margin-bottom: 10px; /* Ensure space below the image */
+  }
+  
+  
+  @media (max-width: 768px) {
+    .flexChild {
+        width: 100%; /* On smaller screens, each item will take up full width */
+    }
+  }
+  
+  /* Skills Section */
+  .skills-container {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    gap: 20px; /* Add space between items */
+  }
+  
+  .fun-facts-wrapper {
+    display: flex; /* Flexbox to align image and text horizontally */
+    align-items: center; /* Vertically center the content inside */
+    padding: 10px;
+    border: 1px solid #ddd; /* Optional: Border for aesthetics */
+    border-radius: 8px; /* Optional: Rounded corners */
+    max-width: 350px; /* Increased max width for each card */
+    width: 100%; /* Allow the card to take full width up to max-width */
+    height: 80px; /* Set a fixed height for uniformity */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+    overflow: hidden; /* Hide overflow content */
+  }
+  
+  .fun-facts-wrapper img {
+    max-width: 60px;  /* Set a max width for images */
+    max-height: 60px; /* Set a max height for images */
+    width: auto;      /* Keep width auto */
+    height: auto;     /* Keep height auto */
+    margin-right: 10px; /* Space between the image and text */
+    flex-shrink: 0;   /* Prevent the image from shrinking */
+    object-fit: contain; /* Scale image to fit the container while maintaining aspect ratio */
+  }
+  
+  
+  .tools-title {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .tools-subhead {
+    margin: 0;
+    font-size: 1em;
+    color: #666;
+  }
+  
+  
+  
+  
+  /* Responsive: Stack items vertically on small screens */
+  @media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column; /* Stack items vertically */
+    }
+  
+    .fun-facts-wrapper {
+        width: 100%; /* Full width on small screens */
+    }
+  }
+  
+  
+  /* Responsive design: Stack items on top of each other for smaller screens */
+  @media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+  
+    .fun-facts-wrapper {
+        width: 100%; /* Make each item take up full width on small screens */
+    }
+  }
+  
+  /* Projects Section */
+  .projects {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-item {
+    text-align: center;
+  }
+  
+  .project-item img {
+    width: 100%; /* Ensures image takes full width of the container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Round the corners of the images */
+    max-height: 200px; /* Optional: set a maximum height for uniformity */
+    object-fit: cover; /* Optional: ensures the image covers the area without stretching */
+  }
+  
+  .project-item img:hover {
+    opacity: 0.9; /* Change opacity on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: transform 0.3s, opacity 0.3s; /* Smooth transition */
+  }
+  
+  /* Card Hover Effect */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Position relative for overlay positioning */
+    overflow: hidden; /* Prevent overlay from extending outside the card */
+  }
+  
+  /* Scale up the card and add a light overlay on hover */
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Brighten the image on hover */
+  .card:hover .card-img-top {
+    filter: brightness(62%); /* Lighten the image */
+  }
+  
+  /* Optional: Change the background color on hover */
+  .card:hover .card-body {
+    background-color: rgba(248, 249, 250, 0.9); /* Light gray background on hover */
+  }
+  
+  /* Light overlay effect */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); /* Light overlay color */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Show overlay on hover */
+  .card:hover .overlay {
+    opacity: 1; /* Show overlay */
+  }
+  
+  
+  
+  /* Contact Section */
+  .contact {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  /* Footer Section */
+  
+  footer {
+    background-color: #333;
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .social-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-links li {
+    display: inline;
+    margin: 0 1rem;
+  }
+  
+  .social-links a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  
+  /* Media Queries */
+  @media (max-width: 1280px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+  
+    .nav-list li a {
+        font-size: 1.2rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .flexContainer {
+        flex-direction: column; /* Stack items vertically on small screens */
+    }
+  }
+  
